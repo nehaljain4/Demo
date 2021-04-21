@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
+        width: '19%',
+        height:'83%',
+        paddingLeft:0
     },
     header:{
         background:'#ffffff'
@@ -41,7 +44,28 @@ const useStyles = makeStyles((theme) => ({
     fullList: {
       width: 'auto',
     },
-}));
+  
+
+    "@media (max-width: 1100px)": {
+      title: { paddingTop: '-6px',
+        height: 60,
+    },
+    },
+    "@media (max-width: 900px)": {
+      title: { paddingTop: '-6px',
+        height: 45,
+    },
+    },
+
+    "@media (max-width: 400px)": {
+      title: { paddingTop: '-6px',
+        height: 30,
+    },
+    },
+  }));
+  
+ 
+
 
 export default function MenuAppBar() {
   const classes = useStyles();
@@ -49,9 +73,6 @@ export default function MenuAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -69,7 +90,7 @@ export default function MenuAppBar() {
         <Toolbar>
 
           <Typography variant="h6" className={classes.title} align="left">
-            <img src={Img} style={{width:'14%',height:'14 %',paddingTop:'10px'}} /> 
+            <img src={Img} className={classes.title} /> 
           </Typography>
 
           <div style={{

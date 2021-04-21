@@ -14,9 +14,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import get from 'lodash/get';
 import filter from 'lodash/filter';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import CloseIcon from '@material-ui/icons/Close';
-import withWidth from '@material-ui/core/withWidth';
 import Hidden from '@material-ui/core/Hidden';
 import Images from './Images/logo.svg';
 
@@ -234,7 +232,7 @@ class AppHeader extends Component {
                   }
                   className={navIconClassName}
                 >
-                  <HamburgerMobile />
+                  {/* <HamburgerMobile /> */}
                 </IconButton>
               )}
               {
